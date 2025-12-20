@@ -38,6 +38,20 @@ Developed by: Karthik J
 
 RegisterNumber: 25017529
 */
+```
+module upcounter(clk,rst,count);
+input clk,rst;
+output reg[3:0]count;
+always@(posedge clk or negedge rst)
+begin
+if(!rst)
+count <= 4'b0000;
+else
+count <= count+1;
+end
+endmodule
+
+```
 
 **RTL LOGIC UP COUNTER**
 
